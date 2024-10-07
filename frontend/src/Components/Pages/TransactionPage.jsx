@@ -29,7 +29,7 @@ const TransactionPage = () => {
     const fetchTransaction = async () => {
       try {
         const response = await axios.get(
-          `https://expense-tracker-api-six.vercel.app/api/transactions/${transactionId}`
+          `http://localhost:5000/api/transactions/${transactionId}`
         );
         setFormData(response.data);
       } catch (error) {
@@ -72,7 +72,7 @@ const TransactionPage = () => {
       }
 
       const response = await axios.put(
-        `https://expense-tracker-api-six.vercel.app/api/update/${transactionId}`,
+        `http://localhost:5000/api/update/${transactionId}`,
         formData
       );
 
