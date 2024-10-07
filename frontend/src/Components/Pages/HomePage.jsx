@@ -39,7 +39,7 @@ const HomePage = () => {
       setLoading(true);
       try {
         const response = await axios.post(
-          "http://localhost:5000/api/transactions/categoryStatistics"
+          "https://expense-tracker-api-six.vercel.app/api/transactions/categoryStatistics"
         );
         const categories = response.data.map((item) => item.category);
         const amounts = response.data.map((item) => item.totalAmount);
