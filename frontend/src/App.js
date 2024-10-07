@@ -4,7 +4,6 @@ import HomePage from "./Components/Pages/HomePage";
 import NotFoundPage from "./Components/Pages/NotFoundPage";
 import TransactionPage from "./Components/Pages/TransactionPage";
 import Header from "./Components/UI/Header";
-import Card from "./Components/Pages/Card";
 
 const App = () => {
   return (
