@@ -37,7 +37,7 @@ const TransactionForm = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/create",
+        "https://expense-tracker-api-six.vercel.app/api/create",
         transactionData,
         { withCredentials: true }
       );
