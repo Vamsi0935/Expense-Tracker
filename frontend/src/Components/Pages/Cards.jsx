@@ -11,7 +11,7 @@ const Cards = () => {
   useEffect(() => {
     const fetchTransactions = async () => {
       try {
-        const response = await axios.get("https://expense-tracker-api-six.vercel.app/api/list");
+        const response = await axios.get("http://localhost:5000/api/list");
         setTransactions(response.data);
       } catch (error) {
         console.error("Error fetching transactions:", error);
@@ -37,7 +37,7 @@ const Cards = () => {
 
     if (result.isConfirmed) {
       try {
-        await axios.delete(`https://expense-tracker-api-six.vercel.app/api/delete/${transactionId}`);
+        await axios.delete(`http://localhost:5000/api/delete/${transactionId}`);
 
         setTransactions((prevTransactions) =>
           prevTransactions.filter(
