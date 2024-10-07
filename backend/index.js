@@ -6,7 +6,7 @@ import transactionRoutes from "./routes/transaction.route.js";
 const app = express();
 
 app.use(express.json());
-app.use(cors({ origin: "http://localhost:3000", credentials: true }));
+app.use(cors({ [origin: "http://localhost:3000","https://expense-tracker-puce-nine-25.vercel.app"], credentials: true, methods:["GET", "POST", "PUT", "DELETE"] }));
 
 mongoose
   .connect(
